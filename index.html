@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Railway Reservation System</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, sans-serif;
+            background: #f4f4f4; /* Light grey background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: #ffffff; /* White background for the login form */
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* Input Styles */
+        form input {
+            width: 80%;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            outline: none;
+            background: #f9f9f9;
+            color: #333;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        form input::placeholder {
+            color: #999;
+        }
+
+        form input:focus {
+            background: #ffffff;
+            border: 1px solid #007aff;
+        }
+
+        /* Button Styles */
+        form button {
+            width: 100%;
+            padding: 15px;
+            background: #007aff;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            background: #005bb5;
+            transform: scale(1.02);
+        }
+
+        form button:active {
+            transform: scale(1);
+        }
+
+        /* Add subtle shadows */
+        form input,
+        form button {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            form input,
+            form button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Railway Reservation System</h1>
+
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate login validation (for demonstration purposes)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'admin' && password === 'admin123') {
+                // If login is successful, redirect to the login.html page
+                window.location.href = 'login.html';
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Railway Reservation System</h1>
+
+        <!-- View and Add Train -->
+        <h2>Trains</h2>
+        <button id="fetch-trains">View Trains</button>
+        <table id="trains-table">
+            <thead>
+                <tr>
+                    <th>Train No</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Total Coaches</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Add Train</h3>
+        <form id="add-train-form">
+            <input type="text" id="train_no" placeholder="Train No" required>
+            <input type="text" id="train_name" placeholder="Name" required>
+            <input type="text" id="source" placeholder="Source" required>
+            <input type="text" id="destination" placeholder="Destination" required>
+            <input type="time" id="departure" placeholder="Departure" required>
+            <input type="time" id="arrival" placeholder="Arrival" required>
+            <input type="number" id="total_coaches" placeholder="Total Coaches" required>
+            <button type="submit">Add Train</button>
+        </form>
+
+        <!-- View Coaches -->
+        <h2>Coaches</h2>
+        <button id="fetch-coaches">View Coaches</button>
+        <table id="coaches-table">
+            <thead>
+                <tr>
+                    <th>Coach No</th>
+                    <th>Train No</th>
+                    <th>Coach Type</th>
+                    <th>Total Seats</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- View and Add Passenger -->
+        <h2>Passengers</h2>
+        <button id="fetch-passengers">View Passengers</button>
+        <table id="passengers-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Contact No</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Add Passenger</h3>
+        <form id="add-passenger-form">
+            <input type="text" id="passenger_name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="gender" placeholder="Gender" required>
+            <input type="text" id="contact_no" placeholder="Contact No" required>
+            <button type="submit">Add Passenger</button>
+        </form>
+
+        <!-- View Reservations -->
+        <h2>Reservations</h2>
+        <button id="fetch-reservations">View Reservations</button>
+        <table id="reservations-table">
+            <thead>
+                <tr>
+                    <th>PNR No</th>
+                    <th>Train No</th>
+                    <th>Coach No</th>
+                    <th>Passenger ID</th>
+                    <th>Seat No</th>
+                    <th>Fare</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Booking Ticket -->
+        <h2>Book a Ticket</h2>
+        <form id="booking-form">
+            <input type="text" id="passenger_id_booking" placeholder="Passenger ID" required>
+            <input type="text" id="train_no_booking" placeholder="Train No" required>
+            <input type="text" id="coach_no_booking" placeholder="Coach No" required>
+            <input type="text" id="seat_no_booking" placeholder="Seat No" required>
+            <input type="number" id="fare_booking" placeholder="Fare" required>
+            <button type="submit">Book Ticket</button>
+        </form>
+
+        <!-- Cancel Ticket -->
+        <h2>Cancel a Ticket</h2>
+        <form id="cancel-form">
+            <input type="text" id="pnr_no_cancel" placeholder="PNR No" required>
+            <button type="submit">Cancel Ticket</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
